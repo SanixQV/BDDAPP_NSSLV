@@ -12,7 +12,7 @@ foreach($liste as $game){
 $liste = \bddapp\model\Company::where('location_country','=','Japan')->get();
 
 foreach($liste as $company){
-    //echo $company->name . '<br>';
+    //echo $company->name . '<br>';;
 }
 $liste = \bddapp\model\Platform::where('install_base','>=','10000000')->get();
 foreach($liste as $platform){
