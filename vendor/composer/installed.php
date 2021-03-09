@@ -31,17 +31,17 @@
     ),
     'illuminate/collections' => 
     array (
-      'pretty_version' => 'v8.30.1',
-      'version' => '8.30.1.0',
+      'pretty_version' => 'v8.32.1',
+      'version' => '8.32.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ecc881c6dce66e22f2c236374f342d41c7ebeb67',
+      'reference' => 'd7cc717a00064b40fa63a8ad522042005e1de1ed',
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v8.30.1',
-      'version' => '8.30.1.0',
+      'pretty_version' => 'v8.32.1',
+      'version' => '8.32.1.0',
       'aliases' => 
       array (
       ),
@@ -49,8 +49,8 @@
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v8.30.1',
-      'version' => '8.30.1.0',
+      'pretty_version' => 'v8.32.1',
+      'version' => '8.32.1.0',
       'aliases' => 
       array (
       ),
@@ -58,17 +58,17 @@
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v8.30.1',
-      'version' => '8.30.1.0',
+      'pretty_version' => 'v8.32.1',
+      'version' => '8.32.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a2be80ba829258b9b44fa43443aa81653604b931',
+      'reference' => 'f6a10cebd9bbd188ca66993168fb453439dbb50f',
     ),
     'illuminate/macroable' => 
     array (
-      'pretty_version' => 'v8.30.1',
-      'version' => '8.30.1.0',
+      'pretty_version' => 'v8.32.1',
+      'version' => '8.32.1.0',
       'aliases' => 
       array (
       ),
@@ -76,30 +76,30 @@
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v8.30.1',
-      'version' => '8.30.1.0',
+      'pretty_version' => 'v8.32.1',
+      'version' => '8.32.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0f59c467c1b612122488a262e7f9fb32b30df36a',
+      'reference' => '2ef7ff288366a1ebe32f633196a1b90bd443acc3',
     ),
     'nesbot/carbon' => 
     array (
-      'pretty_version' => '2.45.1',
-      'version' => '2.45.1.0',
+      'pretty_version' => '2.46.0',
+      'version' => '2.46.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '528783b188bdb853eb21239b1722831e0f000a8d',
+      'reference' => '2fd2c4a77d58a4e95234c8a61c5df1f157a91bf4',
     ),
     'psr/container' => 
     array (
-      'pretty_version' => '1.0.0',
-      'version' => '1.0.0.0',
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b7ce3b176482dbbc1245ebf52b181af44c2cf55f',
+      'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
     ),
     'psr/container-implementation' => 
     array (
@@ -126,12 +126,12 @@
     ),
     'symfony/console' => 
     array (
-      'pretty_version' => 'v5.2.3',
-      'version' => '5.2.3.0',
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '89d4b176d12a2946a1ae4e34906a025b7b6b135a',
+      'reference' => 'd6d0cc30d8c0fda4e7b213c20509b0159a8f4556',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -198,21 +198,21 @@
     ),
     'symfony/string' => 
     array (
-      'pretty_version' => 'v5.2.3',
-      'version' => '5.2.3.0',
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c95468897f408dd0aca2ff582074423dd0455122',
+      'reference' => '4e78d7d47061fa183639927ec40d607973699609',
     ),
     'symfony/translation' => 
     array (
-      'pretty_version' => 'v5.2.3',
-      'version' => '5.2.3.0',
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c021864d4354ee55160ddcfd31dc477a1bc77949',
+      'reference' => '74b0353ab34ff4cca827a2cf909e325d96815e60',
     ),
     'symfony/translation-contracts' => 
     array (
@@ -227,7 +227,7 @@
     array (
       'provided' => 
       array (
-        0 => '2.0',
+        0 => '2.3',
       ),
     ),
     'voku/portable-ascii' => 
