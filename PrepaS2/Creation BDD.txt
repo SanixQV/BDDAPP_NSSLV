@@ -1,7 +1,9 @@
 create table categorie(
     idCat int Primary key,
     nom varchar(255),
-    descr varchar(255));
+    descr varchar(255)
+);
+
 create table Annonce(
 	idAn int Primary Key,
 	titre varchar(255),
