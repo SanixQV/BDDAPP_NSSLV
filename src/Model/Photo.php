@@ -1,7 +1,7 @@
 <?php
-namespace wishlist\PrepaS2\model;
+namespace bddapp\Model;
 use Illuminate\Database\Eloquent\Model;
-use wishlist\PrepaS2\Model\Annonce as Annonce;
+use bddapp\Model\Annonce as Annonce;
 class Photo extends Model
 {
     protected $table = 'photo';

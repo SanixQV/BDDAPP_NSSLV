@@ -17,17 +17,16 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'w' => 
-        array (
-            'wishlist\\' => 9,
-        ),
         'v' => 
         array (
             'voku\\' => 5,
+        ),
+        'b' => 
+        array (
+            'bddapp\\' => 7,
         ),
         'S' => 
         array (
@@ -42,12 +41,10 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Console\\' => 26,
-            'Slim\\' => 5,
         ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
-            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
         'I' => 
@@ -56,10 +53,6 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
             'Illuminate\\Database\\' => 20,
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
-        ),
-        'F' => 
-        array (
-            'FastRoute\\' => 10,
         ),
         'D' => 
         array (
@@ -72,13 +65,13 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
     );
 
     public static $prefixDirsPsr4 = array (
-        'wishlist\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'bddapp\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -124,17 +117,9 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Slim\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/slim/Slim',
-        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -158,10 +143,6 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
         ),
-        'FastRoute\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
-        ),
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
@@ -169,16 +150,6 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'Pimple' => 
-            array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
-            ),
         ),
     );
 
@@ -197,7 +168,6 @@ class ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit3bf49114ff4de10f6b9ab6b04c385ae4::$classMap;
 
         }, null, ClassLoader::class);

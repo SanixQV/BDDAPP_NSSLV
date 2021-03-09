@@ -1,13 +1,13 @@
 <?php
 
-namespace wishlist\PrepaS2\model;
+namespace bddapp\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use wishlist\PrepaS2\Model\Photo as Photo;
 use wishlist\PrepaS2\Model\Categorie as Categorie;
 class Annonce extends Model
 {
-    protected $table = 'Annonces';
+    protected $table = 'Annonce';
 	protected $primaryKey = 'idAn';
 	public $timestamps = false;
     /**
@@ -16,7 +16,7 @@ class Annonce extends Model
 
     public function photo()
     {
-        return $this->hasMany('Photo');
+        return $this->hasMany('bddapp\Model\Photo');
     }
     /**
      * The roles that belong to the user.
@@ -24,6 +24,6 @@ class Annonce extends Model
 
     public function Categorie()
     {
-        return $this->belongsToMany('Categorie');
+        return $this->belongsToMany('bddapp\Model\Categorie');
     }
 }
