@@ -12,6 +12,6 @@ class Photo extends Model
      */
     public function Annonce()
     {
-        return $this->belongsTo('Annonce');
+        return $this->belongsTo('bddApp\Model\Annonce','idAn');
     }
 }

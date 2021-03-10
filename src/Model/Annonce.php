@@ -3,8 +3,9 @@
 namespace bddapp\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use wishlist\PrepaS2\Model\Photo as Photo;
-use wishlist\PrepaS2\Model\Categorie as Categorie;
+use bddapp\Model\Photo as Photo;
+use bddapp\Model\Categorie as Categorie;
+
 class Annonce extends Model
 {
     protected $table = 'Annonce';
@@ -16,7 +17,7 @@ class Annonce extends Model
 
     public function photo()
     {
-        return $this->hasMany('bddapp\Model\Photo');
+        return $this->hasMany('bddapp\Model\Photo','idAn');
     }
     /**
      * The roles that belong to the user.
