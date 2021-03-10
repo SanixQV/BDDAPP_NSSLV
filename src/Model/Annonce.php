@@ -1,6 +1,6 @@
 <?php
 
-namespace bddapp\Model;
+namespace bddapp\Model;;
 
 use Illuminate\Database\Eloquent\Model;
 use bddapp\Model\Photo as Photo;
