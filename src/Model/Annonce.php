@@ -19,12 +19,10 @@ class Annonce extends Model
     {
         return $this->hasMany('bddapp\Model\Photo','idAn');
     }
-    /**
-     * The roles that belong to the user.
-     */
-
-    public function Categorie()
+    
+    public function Annonce()
     {
-        return $this->belongsToMany('bddapp\Model\Categorie');
+        return $this->belongsToMany('bddapp\Model\Categorie', 'appartenanceCategorieAnnonce', 'idAn', 'idCat');
     }
+
 }

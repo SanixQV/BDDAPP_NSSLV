@@ -7,7 +7,7 @@ print ("eloquent est installe ! \n");
 $db->addConnection([
 	'driver' => 'mysql',
 	'host' => 'localhost',
-	'database' => 'preparations',
+	'database' => 'preparations2',
 	'username' => 'root',
 	'password' => '',
 	'charset' => 'utf8',
@@ -46,3 +46,13 @@ foreach($phot as $a){
 $photos2000 = $a->annonce()->get();
 echo $photos2000;
 }
+
+
+
+$item = new bddapp\Model\Photo();
+$item->idPhoto = 7;
+$item->idAn = 22;
+$item->file = 'Mangas';
+$item->date = '2021-03-25';
+$item->tailleOctets = 20000000;
+$item->save();
