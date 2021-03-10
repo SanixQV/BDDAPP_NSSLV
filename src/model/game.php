@@ -21,4 +21,7 @@ class game extends Model
     public function rating(){
         return $this->belongsToMany('bddapp\Model\game_rating','game2rating','game_id','rating_id');
     }
+    public function genre(){
+        return $this->belongsToMany('bddapp\Model\genre','game2genre','game_id','genre_id');
+    }
 }

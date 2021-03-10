@@ -5,7 +5,7 @@ use bddapp\model\game;
 
 Eloquent::start(__DIR__ . '/config/db.config.ini');
 
-/**
+
 echo ' <br> <br> Question 1 <br> ';
 $game = game::find(12342);
 $chars = $game->character()->get();
@@ -55,7 +55,7 @@ foreach($games as $g){
     echo $g->name;
 }
 
-*/
+echo ' <br> <br> Question 6 <br> ';
 $games = game::where('name','like','Mario%')->get();
 foreach($games as $game){
     $rates = $game->rating()->where('name','Like','%3+')->get();
@@ -67,7 +67,50 @@ foreach($games as $game){
     }
 }
 
-$games = game::where('name','like','Mario%')->get();
+echo ' <br> <br> Question 7 <br> ';
+$games = game::where('name','like','Mario%')
+        ->wherehas('company', function ($q){
+            $q->where('name', 'like', '%Inc.%');
+        })
+        ->wherehas('rating', function ($q){
+            $q->where('name','Like','%3+%');
+        })->get();
 foreach($games as $game){
+    echo $game->name .' <br> ';
+}
 
+
+echo ' <br> <br> Question 8 <br> ';
+$games = game::where('name','like','Mario%')
+        ->wherehas('company', function ($q){
+            $q->where('name', 'like', '%Inc.%');
+        })
+        ->wherehas('rating', function ($q){
+            $q->where('name','Like','%3+%');
+        })
+        ->wherehas('rating.rating_board', function ($q){
+                $q->where('name', 'like', '%CERO%');
+        })->get();
+
+foreach($games as $game){
+    echo $game->name .' <br> ';
+}
+
+echo ' <br> <br> Question 9 <br> ';
+$game = game::find(12);
+$genre = new bddapp\model\genre();
+$genre->name = 'Question9';
+
+//$game->genre()->save($genre);
+
+$genre = bddapp\model\genre::find(52);
+$genre->games()->attach( [56,345]);
+
+
+
+$games = game::wherehas('genre', function ($q){
+    $q->where('id', '=', '52');
+})->get();
+foreach($games as $game){
+        echo $game->id . ' ';
 }
