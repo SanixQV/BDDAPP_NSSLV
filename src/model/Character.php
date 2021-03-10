@@ -16,4 +16,8 @@ class Character extends Model
     public function platform(){
         return $this->hasMany('\bddapp\model\Platform','id');
     }
+
+    public function game(){
+        return $this->belongsToMany('bddapp\Model\game','game2character','character_id','game_id');
+    }
 }
