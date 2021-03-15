@@ -11,7 +11,7 @@ class Eloquent
         $db->addConnection(parse_ini_file($file));
         $db->setAsGlobal();
         $db->bootEloquent();
-
+        return $db;
     }
 
 }
