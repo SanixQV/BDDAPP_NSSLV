@@ -38,3 +38,23 @@ $games = \bddapp\model\game::where('name','like','Mario%')->wherehas('rating', f
 $temp2 = microtime(true);
 echo("requete 4 :" . $temp2 - $temp);
 
+
+echo '<br> Question 1.2.1 <br> ';
+$temp = microtime(true);
+$games = \bddapp\model\game::where('name','like','%Mario')->get();
+$temp2 = microtime(true);
+
+echo("requete a :" . $temp2 - $temp);
+
+$temp = microtime(true);
+$games = \bddapp\model\game::where('name','like','%Sonic')->get();
+$temp2 = microtime(true);
+
+echo("requete b :" . $temp2 - $temp);
+
+$temp = microtime(true);
+$games = \bddapp\model\game::where('name','like','%ball')->get();
+$temp2 = microtime(true);
+
+echo("requete c :" . $temp2 - $temp);
+
