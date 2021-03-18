@@ -5,6 +5,7 @@ use bddapp\bd\Eloquent as Eloquent;
 
 
 Eloquent::start(__DIR__ . '/config/db.config.ini');
+DB::connection()->enableQueryLog();
 
 echo ' <br> <br> Question 1 <br> ';
 $temp = microtime(true);
@@ -58,3 +59,19 @@ $temp2 = microtime(true);
 
 echo("requete c :" . ($temp2 - $temp));
 
+
+
+
+
+
+/**
+ * affichage du log de requêtes
+ */
+$i=0;
+foreach (DB::getQueryLog() as $q) {
+    echo "-------------- <br>";
+    $i+=1;
+    var_dump($q);
+};
+
+echo ($i);

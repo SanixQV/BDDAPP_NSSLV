@@ -24,4 +24,7 @@ class game extends Model
     public function genre(){
         return $this->belongsToMany('bddapp\Model\genre','game2genre','game_id','genre_id');
     }
+    public function FACharacter(){
+        return $this->hasMany('bddapp\Model\Character', 'first_appeared_in_game_id');
+    }
 }

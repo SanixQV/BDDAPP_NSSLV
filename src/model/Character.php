@@ -20,4 +20,8 @@ class Character extends Model
     public function game(){
         return $this->belongsToMany('bddapp\Model\game','game2character','character_id','game_id');
     }
+
+    public function FAgame(){
+        return $this->belongsTo('bddapp\Model\game','first_appeared_in_game_id');
+    }
 }
