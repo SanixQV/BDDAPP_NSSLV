@@ -1,4 +1,4 @@
 
 .idea
 gamepedia.sql
-/src/config/db.config.ini
+src/config/db.config.ini
