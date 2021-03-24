@@ -9,8 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class user extends Model
 {
     protected $table = 'user';
-    protected $primaryKey = 'email';
-    public $timestamps = true;
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 
 
+    public function commentaires(){
+        return $this->hasMany('bddapp\Model\commentaire','idUser');
+    }
 }

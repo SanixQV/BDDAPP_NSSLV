@@ -14,24 +14,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '64e65de715d98e2c5af3cba7e5a2488e9828dc1f',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '64e65de715d98e2c5af3cba7e5a2488e9828dc1f',
     ),
     'doctrine/inflector' => 
     array (
@@ -41,6 +41,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cf661f4eb38f7c881cac67c75ea9b00bf97b210',
+    ),
+    'fakerphp/faker' => 
+    array (
+      'pretty_version' => 'v1.13.0',
+      'version' => '1.13.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ab3f5364d01f2c2c16113442fb987d26e4004913',
     ),
     'illuminate/collections' => 
     array (

@@ -4,7 +4,7 @@
 namespace bddapp\model;
 
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;use Illuminate\Database\Eloquent\QueueEntityResolver;
 
 class game extends Model
 {
