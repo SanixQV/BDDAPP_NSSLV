@@ -53,12 +53,12 @@ class ControllerGame
         }
         $games = game::select('id','name','alias','deck','description','original_release_date')->skip($max)->take(200)->get();
         $body = $res->getBody();
+        $tab = [];
         foreach ($games as $game){
             $c = $this->container->router->pathFor('infoGamesId', ["idGames" => $game["id"]]);
-           $game = array("game" => $game, "links" => $c);  
+            array_push($tab,array( $game, "links" => array("self"=>array("href"=>$c))));
         }
-        $games->set
-        $games = array("games"=>$games,
+        $games = array("games"=>$tab,
             array('links'=>
                 array(
                     "prev"=>

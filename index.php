@@ -34,5 +34,12 @@ $app->get('/api/games[/]',function(Request $rq,Response $rs,array $args){
     return $c->getCollectionGame($rq,$rs,$args);
 })->setName('infoGames');
 
+$app->get('/api/games/{idGames}/comments',function(Request $rq,Response $rs,array $args){
+    $c = new \bddapp\controller\ControllerGame($this);
+    return $c->getCollectionGame($rq,$rs,$args);
+})->setName('infoGames');
+
+
+
 
 $app->run();
