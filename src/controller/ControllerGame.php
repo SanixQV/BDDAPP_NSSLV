@@ -37,23 +37,29 @@ class ControllerGame
 
     public function getCollectionGame(Request $req, Response $res,array $args){
         if(isset( $req->getQueryParams()['page'])){
-            $max= 200*$args['idPage'];
+            $max= 200*($req->getQueryParams()['page']-1);
+            if($req->getQueryParams()['page']==1){
+                $prev=1;
+            }
+            else{
+                $prev=$req->getQueryParams()['page']-1;
+            }
+            $next = $req->getQueryParams()['page']+1;
         }
         else{
-            $max=200;
-        }
-        $games = game::select('id','name','alias','deck','description','original_release_date')->whereBetWeen('id',[$max-200,$max])->get();
-        $body = $res->getBody();
-        //skip
-        //take
-        if($args['idPage']==1){
+            $next = 2;
             $prev=1;
+            $max=0;
         }
-        else{
-            $prev=$args['idPage']-1;
-        }
-        $next = $args['idPage']+1;
-        $games = array("games"=>$games,array('links'=> array("prev"=>array('href'=>'/api/games/page/'.$prev),"next"=>array('href'=>'/api/games/page'.$next))));
+        $games = game::select('id','name','alias','deck','description','original_release_date')->skip($max)->take(200)->get();
+        $body = $res->getBody();
+        $games = array("games"=>$games,
+            array('links'=>
+                array(
+                    "prev"=>
+                        array('href'=>$this->container->router->pathFor('infoGames').$prev),
+                    "next"=>
+                        array('href'=>$this->container->router->pathFor('infoGames').$next))));
         $body->write(json_encode($games));
         return $res->withHeader(
             'Content-Type',
