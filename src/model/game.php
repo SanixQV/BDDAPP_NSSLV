@@ -6,11 +6,15 @@ namespace bddapp\model;
 
 use Illuminate\Database\Eloquent\Model;use Illuminate\Database\Eloquent\QueueEntityResolver;
 
+/**
+ * @method static find($id)
+ */
 class game extends Model
 {
     protected $table = 'game';
     protected $primaryKey ='id';
     public $timestamps = false;
+
 
     public function character(){
         return $this->belongsToMany('bddapp\Model\Character','game2character','game_id','character_id');
