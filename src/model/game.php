@@ -31,4 +31,8 @@ class game extends Model
     public function FACharacter(){
         return $this->hasMany('bddapp\Model\Character', 'first_appeared_in_game_id');
     }
+
+    public function commentaire(){
+        return $this->hasMany('bddapp\model\commentaire','idJeu');
+    }
 }
